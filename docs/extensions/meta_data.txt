@@ -44,17 +44,23 @@ If a line is indented by 4 or more spaces, that line is assumed to be an
 additional line of the value for the previous keyword. A keyword may have as
 many lines as desired. 
 
-The first blank line ends all meta-data for the document. Therefore, the first 
-line of a document must not be blank. All meta-data is stripped from the 
-document prior to any further processing by Markdown.
+The first blank line ends all meta-data for the document. Therefore, the first
+line of a document must not be blank.
+
+Alternatively, You may use YAML style deliminators to mark the start and/or end
+of your meta-data. When doing so, the first line of your document must be `---`.
+The meta-data ends at the first blank line or the first line containing an end
+deliminator (either `---` or `...`), whichever comes first. Even though YAML
+deliminators are supported, meta-data is not parsed as YAML.
+
+All meta-data is stripped from the document prior to any further processing
+by Markdown.
 
 Usage
 -----
 
 See [Extensions](index.html) for general extension usage, specify `markdown.extensions.meta`
 as the name of the extension.
-
-This extension does not accept any special configuration options.
 
 Accessing the Meta-Data
 -----------------------
@@ -85,8 +91,8 @@ line breaks if desired. Or the items could be joined where appropriate. No
 assumptions are made regarding the data. It is simply passed as found to the 
 `Meta` attribute.
 
-Perhaps the meta-data could be passed into a template system, or used by 
-various Markdown extensions. The possibilities are left to the imagination of 
+Perhaps the meta-data could be passed into a template system, or used by
+various Markdown extensions. The possibilities are left to the imagination of
 the developer.
 
 Compatible Extensions
