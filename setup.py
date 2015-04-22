@@ -249,10 +249,9 @@ You may ask for help and discuss various other issues on the
 '''
 
 setup(
-    name='Markdown',
+    name='markdown-py26-support',
     version=version,
     url='https://pythonhosted.org/Markdown/',
-    download_url='http://pypi.python.org/packages/source/M/Markdown/Markdown-%s.tar.gz' % version,
     description='Python implementation of Markdown.',
     long_description=long_description,
     author='Manfred Stienstra, Yuri takhteyev and Waylan limberg',
